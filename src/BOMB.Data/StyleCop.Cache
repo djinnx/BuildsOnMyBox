@@ -1,0 +1,87 @@
+<stylecopresultscache>
+  <version>11</version>
+  <sourcecode name="Configuration.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>07/08/2012 23:01:27</timestamp>
+      <milliseconds>348</milliseconds>
+    </settings>
+    <timestamp>07/12/2012 21:17:32</timestamp>
+    <milliseconds>35</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="Account.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>07/08/2012 23:01:27</timestamp>
+      <milliseconds>348</milliseconds>
+    </settings>
+    <timestamp>07/12/2012 21:17:32</timestamp>
+    <milliseconds>36</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="BombContext.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>07/08/2012 23:01:27</timestamp>
+      <milliseconds>348</milliseconds>
+    </settings>
+    <timestamp>07/12/2012 21:17:32</timestamp>
+    <milliseconds>30</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="AssemblyInfo.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>07/08/2012 23:01:27</timestamp>
+      <milliseconds>348</milliseconds>
+    </settings>
+    <timestamp>07/08/2012 23:01:27</timestamp>
+    <milliseconds>348</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="GenericRepository.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>07/08/2012 23:01:27</timestamp>
+      <milliseconds>348</milliseconds>
+    </settings>
+    <timestamp>07/12/2012 21:17:32</timestamp>
+    <milliseconds>31</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name=".NETFramework,Version=v4.0.AssemblyAttributes.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>07/08/2012 23:01:27</timestamp>
+      <milliseconds>348</milliseconds>
+    </settings>
+    <timestamp>07/05/2012 23:26:41</timestamp>
+    <milliseconds>356</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="UnitOfWork.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>07/08/2012 23:01:27</timestamp>
+      <milliseconds>348</milliseconds>
+    </settings>
+    <timestamp>07/12/2012 21:17:32</timestamp>
+    <milliseconds>37</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="201207120440273_Account.Designer.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>07/08/2012 23:01:27</timestamp>
+      <milliseconds>348</milliseconds>
+    </settings>
+    <timestamp>07/12/2012 21:17:32</timestamp>
+    <milliseconds>33</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="201207120440273_Account.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>07/08/2012 23:01:27</timestamp>
+      <milliseconds>348</milliseconds>
+    </settings>
+    <timestamp>07/12/2012 21:17:32</timestamp>
+    <milliseconds>34</milliseconds>
+    <violations />
+  </sourcecode>
+  <project key="425426557">
+    <configuration>DEBUG;TRACE</configuration>
+  </project>
+</stylecopresultscache>
