@@ -1,60 +1,50 @@
 ﻿@{    
     if (Request.QueryString["layout"] == "fluid")
     {
-        ViewBag.Title = "Home Page Fluid Layout";
-        ViewBag.Message = "Bootstrap Fluid Layout";
+        ViewBag.Title = "Builds On My Box";
+        ViewBag.Message = "Builds On My Box";
         Layout = "~/Views/Shared/_LayoutFluid.cshtml";
     }
     else
     {
-        ViewBag.Title = "Home Page Standard Layout";
-        ViewBag.Message = "Bootstrap Standard Layout";
+        ViewBag.Title = "Builds On My Box";
+        ViewBag.Message = "Builds On My Box";
         Layout = "~/Views/Shared/_Layout.cshtml";
     }
 }
-<!-- Main hero unit for a primary marketing message or call to action -->
-<div class="hero-unit">
-    <h1>
-        @ViewBag.Message</h1>
-    <p>
-        This is a template for a simple marketing or informational website. It includes
-        a large callout called the hero unit and three supporting pieces of content. Use
-        it as a starting point to create something more unique.</p>
-    <p>
-        <a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+<div class="row-fluid">
+    <div class="span12">
+        <center>
+            <img src="~/Content/images/logo.jpg" alt="Builds On My Box"/>
+        </center>
+    </div>
 </div>
 <!-- Example row of columns -->
 <div class="row-fluid">
     <div class="span4">
         <h2>
-            Heading</h2>
+            Git and GitHub</h2>
         <p>
-            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus
-            commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-            Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+            We are using Git as our source control, hosted up at <a href="http://github.com" target="_blank">GitHub</a>. We are using the the 
+            <a href="http://windows.github.com/" target="_blank">Git for Windows</a> from GitHub GUI client and the Shell.
         </p>
         <p>
-            <a class="btn" href="#">View details &raquo;</a></p>
+            <a class="btn" href="https://github.com/djinnx/BuildsOnMyBox">View on GitHub &raquo;</a></p>
     </div>
     <div class="span4">
-        <h2>
-            Heading</h2>
+        <h2>Steve and Dave</h2>
         <p>
-            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus
-            commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-            Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+            Steve and Dave are two Software Development Engineers who have a passion for code and continuous learning.
         </p>
         <p>
-            <a class="btn" href="#">View details &raquo;</a></p>
+            <a class="btn" href="#">Learn more &raquo;</a></p>
     </div>
     <div class="span4">
-        <h2>
-            Heading</h2>
+        <h2>Contact Us</h2>
         <p>
-            Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-            Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus
-            commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            Question, comment, concern? Send us a message using our contact form and we will get back to you as soon as we can.
+        </p>
         <p>
-            <a class="btn" href="#">View details &raquo;</a></p>
+            <a class="btn" href="#">Contact form &raquo;</a></p>
     </div>
 </div>
