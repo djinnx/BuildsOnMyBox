@@ -35,17 +35,6 @@
         }
 
         /// <summary>
-        /// Gets the context.
-        /// </summary>
-        public BombContext Context
-        {
-            get
-            {
-                return this.context;
-            }
-        }
-
-        /// <summary>
         /// Gets the account repository.
         /// </summary>
         public GenericRepository<Account> AccountRepository
@@ -59,6 +48,15 @@
 
                 return this.accountRepository;
             }
+        }
+
+        /// <summary>
+        /// Validates the on save.
+        /// </summary>
+        /// <param name="value">if set to <c>true</c> [value].</param>
+        public void ValidateOnSave(bool value)
+        {
+            this.context.ValidateOnSave(value);
         }
 
         /// <summary>

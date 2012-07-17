@@ -76,7 +76,7 @@
                             }
                             else
                             {
-                                Account a = this.accountService.Get(guid);
+                                Account a = this.accountService.GetByPrivateGuid(guid);
                                 this.IssueAuthTicket(new UserState() { PrivateGuid = a.PrivateGuid, EmailAddress = a.EmailAddress, DisplayName = a.DisplayName }, true);
                             }
 
@@ -192,7 +192,7 @@
         {
             FormsAuthentication.SignOut();
 
-            if (string.IsNullOrEmpty(redirectTo))
+            if (!string.IsNullOrEmpty(redirectTo))
             {
                 return new RedirectResult(redirectTo);
             }

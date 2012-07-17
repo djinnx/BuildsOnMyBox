@@ -172,6 +172,10 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Core\Attributes\MustBeLoggedInAttribute.cs" />
+    <Compile Include="Core\Helpers\BootstrapFormHelper.cs" />
+    <Compile Include="Core\Helpers\StringExtensions.cs" />
+    <Compile Include="Core\Helpers\TagBuilderExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -344,6 +348,9 @@
     <Content Include="Views\Shared\_NavPartial.cshtml" />
     <Content Include="Views\Shared\_SidebarPartial.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Account\LogOn.cshtml" />
+    <Content Include="Views\Account\LogOnStep2.cshtml" />
+    <Content Include="Views\Account\FirstTimeLoggingIn.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

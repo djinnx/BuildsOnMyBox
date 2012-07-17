@@ -6,10 +6,11 @@
             <b class="caret"></b></a>
             <ul class="dropdown-menu">
                 <li>
-                    @Html.ActionLink("Change Password", "ChangePassword", "Account")
+                    @Html.ActionLink("Account Settings", "Settings", "Account")
                 </li>
                 <li>
-                    @Html.ActionLink("Log Off", "LogOff", "Account")
+                    @Html.ActionLink("Log Off", MVC.Account.LogOff())
+                    
                 </li>
             </ul>
         </li>
@@ -20,10 +21,7 @@
             <b class="caret"></b></a>
             <ul class="dropdown-menu">
                 <li>
-                    @Html.ActionLink("Log On", "LogOn", "Account")
-                </li>
-                <li>
-                    @Html.ActionLink("Register", "Register", "Account")
+                    @Html.ActionLink("Log On / Register", "LogOn", "Account")
                 </li>
             </ul>
         </li>

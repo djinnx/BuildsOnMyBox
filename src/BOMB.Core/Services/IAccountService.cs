@@ -23,7 +23,7 @@
         /// </summary>
         /// <param name="privateGuid">The private GUID.</param>
         /// <returns>An Account</returns>
-        Account Get(Guid privateGuid);
+        Account GetByPrivateGuid(Guid privateGuid);
 
         /// <summary>
         /// Setup a new account step 1

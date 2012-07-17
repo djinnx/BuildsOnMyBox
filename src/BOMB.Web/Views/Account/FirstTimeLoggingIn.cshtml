@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "First Time Logging in";
+}
+
+<div class="page-header">
+    <h1>
+        First Time Logging in...</h1>
+</div>
+<div class="alert alert-success">
+    <h4 class="alert-heading">
+        Congratulations!</h4>
+    <p>
+        You have successfully setup your account. If you need to log off or access your
+        account settings you can do that by clicking your display name in the upper right
+        hand corner.
+    </p>
+    <p>
+        @Html.ActionLink("Home", "Index", "Home", null, new { @class = "btn btn-success small" })
+    </p>
+</div>

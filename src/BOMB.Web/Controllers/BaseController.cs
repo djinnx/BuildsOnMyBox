@@ -58,7 +58,7 @@
                 {
                     if (this.userState != null && this.userState.PrivateGuid != null)
                     {
-                        this.currentAccount = this.accountService.Get(this.userState.PrivateGuid);
+                        this.currentAccount = this.accountService.GetByPrivateGuid(this.userState.PrivateGuid);
                     }
                 }
 

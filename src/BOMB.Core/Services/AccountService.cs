@@ -33,7 +33,7 @@
         /// <param name="claimedIdentifier">The claimed identifier.</param>
         /// <param name="emailAddress">The email address.</param>
         /// <returns>
-        /// Public Guid
+        /// Private Guid
         /// </returns>
         public Guid NewAccountStep1(string claimedIdentifier, string emailAddress)
         {
@@ -43,6 +43,8 @@
             {
                 return account.PrivateGuid;
             }
+
+            this.uow.ValidateOnSave(false);
 
             Account a = new Account()
             {
@@ -55,6 +57,8 @@
 
             this.uow.AccountRepository.Insert(a);
             this.uow.Save();
+
+            this.uow.ValidateOnSave(false);
 
             return a.PrivateGuid;
         }
@@ -110,7 +114,7 @@
         /// <returns>
         /// An Account
         /// </returns>
-        public BOMB.Domain.Account Get(Guid privateGuid)
+        public BOMB.Domain.Account GetByPrivateGuid(Guid privateGuid)
         {
             var account = this.uow.AccountRepository.Get().SingleOrDefault(x => x.PrivateGuid == privateGuid);
 
