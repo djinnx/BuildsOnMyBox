@@ -42,6 +42,54 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DotNetOpenAuth.Core">
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.1.0.12182\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core.UI">
+      <HintPath>..\packages\DotNetOpenAuth.Core.UI.4.1.0.12182\lib\net40-full\DotNetOpenAuth.Core.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.InfoCard">
+      <HintPath>..\packages\DotNetOpenAuth.InfoCard.4.1.0.12182\lib\net40-full\DotNetOpenAuth.InfoCard.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.InfoCard.UI">
+      <HintPath>..\packages\DotNetOpenAuth.InfoCard.UI.4.1.0.12182\lib\net40-full\DotNetOpenAuth.InfoCard.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth">
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.1.0.12182\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Common">
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Common.4.1.0.12182\lib\net40-full\DotNetOpenAuth.OAuth.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer">
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.1.0.12182\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.ServiceProvider">
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.ServiceProvider.4.1.0.12182\lib\net40-full\DotNetOpenAuth.OAuth.ServiceProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId">
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.1.0.12182\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.Provider">
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Provider.4.1.0.12182\lib\net40-full\DotNetOpenAuth.OpenId.Provider.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.Provider.UI">
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Provider.UI.4.1.0.12182\lib\net40-full\DotNetOpenAuth.OpenId.Provider.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty">
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.0.12182\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty.UI">
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.UI.4.1.0.12182\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.UI">
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.UI.4.1.0.12182\lib\net40-full\DotNetOpenAuth.OpenId.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenIdInfoCard.UI">
+      <HintPath>..\packages\DotNetOpenAuth.OpenIdInfoCard.UI.4.1.0.12182\lib\net40-full\DotNetOpenAuth.OpenIdInfoCard.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenIdOAuth">
+      <HintPath>..\packages\DotNetOpenAuth.OpenIdOAuth.4.1.0.12182\lib\net40-full\DotNetOpenAuth.OpenIdOAuth.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.4.5.7\lib\net40\Newtonsoft.Json.dll</HintPath>
@@ -113,8 +161,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
     <Compile Include="Areas\Testing\Controllers\HomeController.cs" />
     <Compile Include="Areas\Testing\TestingAreaRegistration.cs" />
+    <Compile Include="BaseController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -122,6 +178,7 @@
     <Compile Include="HomeController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\UserState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SharedController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
@@ -140,6 +197,8 @@
     <Compile Include="Testing.SharedController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\Account\LogOn.cs" />
+    <Compile Include="ViewModels\Account\Step2.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -151,11 +210,15 @@
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
     <Content Include="Content\images\logo.jpg" />
+    <Content Include="Content\images\openid-providers-en.png" />
+    <Content Include="Content\images\openid-providers-ru.png" />
     <Content Include="Content\images\social\Delicious.png" />
     <Content Include="Content\images\social\Facebook.png" />
     <Content Include="Content\images\social\LinkedIn.png" />
     <Content Include="Content\images\social\StackOverflow.png" />
     <Content Include="Content\images\social\Twitter.png" />
+    <Content Include="Content\openid-shadow.css" />
+    <Content Include="Content\openid.css" />
     <Content Include="Content\site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -225,6 +288,8 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\openid-en.js" />
+    <Content Include="Scripts\openid-jquery.js" />
     <Content Include="Scripts\site.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -237,7 +302,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\Testing\Models\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

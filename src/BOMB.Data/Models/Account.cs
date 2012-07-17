@@ -28,6 +28,14 @@
         public Guid PublicGuid { get; set; }
 
         /// <summary>
+        /// Gets or sets the private GUID.
+        /// </summary>
+        /// <value>
+        /// The private GUID.
+        /// </value>
+        public Guid PrivateGuid { get; set; }
+
+        /// <summary>
         /// Gets or sets the claimed identifier.
         /// </summary>
         /// <value>
@@ -56,5 +64,20 @@
         [Required]
         [MaxLength(100)]
         public string DisplayName { get; set; }
+
+        /// <summary>
+        /// Converts this to Domain.Account
+        /// </summary>
+        /// <returns>Domain.Account object</returns>
+        public BOMB.Domain.Account ToDomainAccount()
+        {
+            return new Domain.Account()
+            {
+                PrivateGuid = this.PrivateGuid,
+                PublicGuid = this.PublicGuid,
+                DisplayName = this.DisplayName,
+                EmailAddress = this.EmailAddress,
+            };
+        }
     }
 }

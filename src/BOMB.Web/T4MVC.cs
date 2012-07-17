@@ -25,6 +25,8 @@ using T4MVC;
 public static class MVC {
     static readonly TestingClass s_Testing = new TestingClass();
     public static TestingClass Testing { get { return s_Testing; } }
+    public static BOMB.Web.Controllers.AccountController Account = new BOMB.Web.Controllers.T4MVC_AccountController();
+    public static BOMB.Web.Controllers.BaseController Base = new BOMB.Web.Controllers.T4MVC_BaseController();
     public static BOMB.Web.Controllers.HomeController Home = new BOMB.Web.Controllers.T4MVC_HomeController();
     public static T4MVC.SharedController Shared = new T4MVC.SharedController();
 }
@@ -333,6 +335,10 @@ namespace Links {
         public static readonly string jquery_validate_unobtrusive_min_js = Url("jquery.validate.unobtrusive.min.js");
         public static readonly string modernizr_2_5_3_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/modernizr-2.5.3.min.js") ? Url("modernizr-2.5.3.min.js") : Url("modernizr-2.5.3.js");
                       
+        public static readonly string openid_en_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/openid-en.min.js") ? Url("openid-en.min.js") : Url("openid-en.js");
+                      
+        public static readonly string openid_jquery_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/openid-jquery.min.js") ? Url("openid-jquery.min.js") : Url("openid-jquery.js");
+                      
         public static readonly string site_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/site.min.js") ? Url("site.min.js") : Url("site.js");
                       
     }
@@ -355,8 +361,27 @@ namespace Links {
             public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(URLPATH + "/" + fileName); }
             public static readonly string glyphicons_halflings_white_png = Url("glyphicons-halflings-white.png");
             public static readonly string glyphicons_halflings_png = Url("glyphicons-halflings.png");
+            public static readonly string logo_jpg = Url("logo.jpg");
+            public static readonly string openid_providers_en_png = Url("openid-providers-en.png");
+            public static readonly string openid_providers_ru_png = Url("openid-providers-ru.png");
+            [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+            public static class social {
+                private const string URLPATH = "~/Content/images/social";
+                public static string Url() { return T4MVCHelpers.ProcessVirtualPath(URLPATH); }
+                public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(URLPATH + "/" + fileName); }
+                public static readonly string Delicious_png = Url("Delicious.png");
+                public static readonly string Facebook_png = Url("Facebook.png");
+                public static readonly string LinkedIn_png = Url("LinkedIn.png");
+                public static readonly string StackOverflow_png = Url("StackOverflow.png");
+                public static readonly string Twitter_png = Url("Twitter.png");
+            }
+        
         }
     
+        public static readonly string openid_shadow_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/openid-shadow.min.css") ? Url("openid-shadow.min.css") : Url("openid-shadow.css");
+             
+        public static readonly string openid_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/openid.min.css") ? Url("openid.min.css") : Url("openid.css");
+             
         public static readonly string site_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/site.min.css") ? Url("site.min.css") : Url("site.css");
              
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]

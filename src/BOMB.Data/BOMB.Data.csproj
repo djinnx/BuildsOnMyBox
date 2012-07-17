@@ -52,6 +52,10 @@
     <Compile Include="Migrations\201207120440273_Account.Designer.cs">
       <DependentUpon>201207120440273_Account.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201207170258078_AccountPrivateGuid.cs" />
+    <Compile Include="Migrations\201207170258078_AccountPrivateGuid.Designer.cs">
+      <DependentUpon>201207170258078_AccountPrivateGuid.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="BombContext.cs" />
