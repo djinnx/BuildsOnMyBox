@@ -26,7 +26,6 @@ public static class MVC {
     static readonly TestingClass s_Testing = new TestingClass();
     public static TestingClass Testing { get { return s_Testing; } }
     public static BOMB.Web.Controllers.AccountController Account = new BOMB.Web.Controllers.T4MVC_AccountController();
-    public static BOMB.Web.Controllers.BaseController Base = new BOMB.Web.Controllers.T4MVC_BaseController();
     public static BOMB.Web.Controllers.HomeController Home = new BOMB.Web.Controllers.T4MVC_HomeController();
     public static T4MVC.SharedController Shared = new T4MVC.SharedController();
 }

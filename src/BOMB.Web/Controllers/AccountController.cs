@@ -28,18 +28,8 @@
         /// <summary>
         /// Initializes a new instance of the <see cref="AccountController"/> class.
         /// </summary>
-        public AccountController()
-            : base(new AccountService())
-        {
-            this.accountService = new AccountService();
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AccountController"/> class.
-        /// </summary>
         /// <param name="accountService">The account service.</param>
         public AccountController(IAccountService accountService)
-            : base(accountService)
         {
             this.accountService = accountService;
         }

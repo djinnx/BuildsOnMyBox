@@ -97,6 +97,9 @@ namespace BOMB.Web.Controllers {
         public ViewNames Views { get { return s_views; } }
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ViewNames {
+            public readonly string FirstTimeLoggingIn = "~/Views/Account/FirstTimeLoggingIn.cshtml";
+            public readonly string LogOn = "~/Views/Account/LogOn.cshtml";
+            public readonly string LogOnStep2 = "~/Views/Account/LogOnStep2.cshtml";
         }
     }
 

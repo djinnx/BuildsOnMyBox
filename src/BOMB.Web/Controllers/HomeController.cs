@@ -7,29 +7,8 @@
     /// <summary>
     ///   The Home Controller
     /// </summary>
-    public partial class HomeController : Controller
+    public partial class HomeController : BaseController
     {
-        /// <summary>
-        /// Backing variable for the account service
-        /// </summary>
-        private IAccountService accountService;
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="HomeController"/> class.
-        /// </summary>
-        public HomeController() : this(new AccountService())
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="HomeController"/> class.
-        /// </summary>
-        /// <param name="accountService">The account service.</param>
-        public HomeController(IAccountService accountService)
-        {
-            this.accountService = accountService;
-        }
-
         /// <summary>
         ///   The index Action
         /// </summary>

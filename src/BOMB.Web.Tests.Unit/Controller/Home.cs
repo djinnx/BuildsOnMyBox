@@ -18,14 +18,14 @@ namespace BOMB.Web.Tests.Controller
         [TestMethod]
         public void Index_Action_Returns_Index_View()
         {
-            ActionResult result = new HomeController(new Mock<IAccountService>(MockBehavior.Loose).Object).Index();
+            ActionResult result = new HomeController().Index();
             result.AssertViewRendered().ForViewEndingWith("Index.cshtml");
         }
 
         [TestMethod]
         public void About_Action_Returns_About_View()
         {
-            ActionResult result = new HomeController(new Mock<IAccountService>(MockBehavior.Loose).Object).About();
+            ActionResult result = new HomeController().About();
             result.AssertViewRendered().ForViewEndingWith("About.cshtml");            
         }
     }

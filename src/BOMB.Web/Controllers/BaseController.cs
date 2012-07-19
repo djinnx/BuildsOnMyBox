@@ -9,17 +9,13 @@
     using BOMB.Core.Services;
     using BOMB.Domain;
     using BOMB.Web.Models;
+    using Ninject;
 
     /// <summary>
     /// Base controller inherited by all other controllers
     /// </summary>
-    public partial class BaseController : Controller
+    public abstract partial class BaseController : Controller
     {
-        /// <summary>
-        /// Field for the accountService
-        /// </summary>
-        private IAccountService accountService;
-
         /// <summary>
         /// Field for the UserState
         /// </summary>
@@ -31,21 +27,13 @@
         private Account currentAccount;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="BaseController"/> class.
+        /// Gets or sets the account service.
         /// </summary>
-        public BaseController()
-        {
-            this.accountService = new AccountService();
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BaseController"/> class.
-        /// </summary>
-        /// <param name="accountService">The account service.</param>
-        public BaseController(IAccountService accountService)
-        {
-            this.accountService = accountService;
-        }
+        /// <value>
+        /// The account service.
+        /// </value>
+        [Inject]
+        public IAccountService AccountService { get; set; }
 
         /// <summary>
         /// Gets the current account.
@@ -58,7 +46,7 @@
                 {
                     if (this.userState != null && this.userState.PrivateGuid != null)
                     {
-                        this.currentAccount = this.accountService.GetByPrivateGuid(this.userState.PrivateGuid);
+                        this.currentAccount = this.AccountService.GetByPrivateGuid(this.userState.PrivateGuid);
                     }
                 }
 
