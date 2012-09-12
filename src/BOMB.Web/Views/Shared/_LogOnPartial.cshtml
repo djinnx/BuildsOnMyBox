@@ -1,0 +1,29 @@
+﻿<ul class="nav pull-right">
+    @if (Request.IsAuthenticated)
+    {
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            @User.Identity.Name
+            <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li>
+                    @Html.ActionLink("Account Settings", "Settings", "Account")
+                </li>
+                <li>
+                    @Html.ActionLink("Log Off", MVC.Account.LogOff())
+                    
+                </li>
+            </ul>
+        </li>
+    }
+    else
+    {
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Guest
+            <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li>
+                    @Html.ActionLink("Log On / Register", "LogOn", "Account")
+                </li>
+            </ul>
+        </li>
+    }
+</ul>
